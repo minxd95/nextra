@@ -13,7 +13,13 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pretty": "prettier --check './src/**/*.{ts,tsx,js,jsx}'",
+    "pretty:fix": "prettier --write './src/**/*.{ts,tsx,js,jsx}'",
+    "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx,js,jsx}'",
+    "format": "npm run pretty:fix && npm run lint:fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -27,6 +33,20 @@
     "@types/node": "^18.16.5",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,tsx,js,jsx}": [
+      "npm run pretty:fix",
+      "npm run lint:fix"
+    ]
   }
 }
