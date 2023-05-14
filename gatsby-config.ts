@@ -20,6 +20,9 @@ const config: GatsbyConfig = {
         extensions: ['ts', 'tsx'],
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 

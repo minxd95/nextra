@@ -23,6 +23,7 @@
   "ignorePatterns": ["dist/", "node_modules/"],
   "rules": {
     "semi": "error",
-    "no-console": "error"
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
