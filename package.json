@@ -25,6 +25,7 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "gatsby": "^5.9.1",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-emotion": "^8.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
